@@ -1,22 +1,66 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:gravity="center"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
 
-    <Button
-        android:id="@+id/btnConvidados"
-        android:text="Adicionar Convidados"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Fotos da Festa Do Ano Passado!"
+        android:textSize="20sp" />
 
-    <Button
-        android:id="@+id/btnGastos"
-        android:text="Controle de Gastos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPhotos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:clipToPadding="false"
+        android:padding="4dp" />
 
-    <Button
-        android:id="@+id/btnComesBebes"
-        android:text="Calcular Comes e Bebes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btnGastos"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="Controle de Gastos" />
+
+        <Button
+            android:id="@+id/btnComesBebes"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="Calcular Comes e Bebes" />
+
+        <Button
+            android:id="@+id/btnConvidados"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="Adicionar Convidados" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Local da festa: Praça Coronel Pedro Osório, Centro, Pelotas/RS"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnOpenMap"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="Abrir no Google Maps" />
+
+    </LinearLayout>
+
 </LinearLayout>
